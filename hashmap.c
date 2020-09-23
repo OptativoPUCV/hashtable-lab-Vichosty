@@ -49,7 +49,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 
   
   for (; cap < map->capacity ;cap++){
-    if ( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
+    if ( (map -> buckets[cap] == NULL) | ( map -> buckets[cap] -> key == NULL)){
       break;
     }
     if (cap == map -> capacity-1){
