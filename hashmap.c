@@ -89,12 +89,13 @@ void eraseMap(HashMap * map,  char * key) {
 
 void * searchMap(HashMap * map,  char * key) {   
   long cap = hash(key, map -> capacity);
-  for (; cap < map->capacity ;cap++){
-    if (map -> buckets[cap] != NULL) break;
+  
+  while(map -> buckets[cap] -> key != key){
+    if (cap == map -> capacity -1){
+      return NULL;
+    }else cap++;
   }
-  if (map -> buckets[cap] == NULL){
-    return NULL;
-  }
+  
   map -> current = cap;
   return map-> buckets[cap] -> value;
 }
