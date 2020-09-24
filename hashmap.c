@@ -93,7 +93,7 @@ void * searchMap(HashMap * map,  char * key) {
     if ( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
       break;
     }
-    if (cap == map -> capacity-1) return NULL;
+    if (cap == map -> capacity) return NULL;
 
   }
   map -> current = cap;
