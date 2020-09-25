@@ -114,6 +114,7 @@ void * firstMap(HashMap * map) {
   while( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
     cap++;
   }
+  map -> current = cap;
   return map -> buckets[cap] -> value;
 }
 
