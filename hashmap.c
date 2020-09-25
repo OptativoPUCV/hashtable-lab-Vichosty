@@ -111,12 +111,7 @@ void * searchMap(HashMap * map,  char * key) {
 
 void * firstMap(HashMap * map) {
   int cap = 0;
-  for (; cap < map->capacity ;cap++){
-    if (map -> buckets[cap] != NULL){
-      map -> current = cap;
-      return map-> buckets[cap];
-    }
-  }
+  
   
   return map -> buckets[cap];
 }
