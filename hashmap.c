@@ -92,15 +92,12 @@ void * searchMap(HashMap * map,  char * key) {
   while (cap < map->capacity){
     
     if (is_equal(key, map -> buckets[cap] -> key)){
-      break;
+      map -> current = cap;
+      return map-> buckets[cap] -> value;
     }
-    
-    if (cap == map -> capacity -1){return NULL;}
     cap++;
   }
-  map -> current = cap;
-  
-  return map-> buckets[cap] -> value;
+  return NULL;
   
 }
 
