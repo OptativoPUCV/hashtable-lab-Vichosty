@@ -84,7 +84,7 @@ HashMap * createMap(long capacity) {
 
 void eraseMap(HashMap * map,  char * key) {//pair->key=NULL
 long cap = hash(key, map -> capacity);
-map->buckets[cap -1] -> key = NULL;
+map->buckets[cap] -> key = NULL;
 map -> size = map -> size -1;
 }
 
