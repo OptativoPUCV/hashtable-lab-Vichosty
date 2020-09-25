@@ -113,7 +113,7 @@ void * firstMap(HashMap * map) {
   int cap = 0;
   
   
-  return map -> buckets[cap];
+  return map -> buckets[cap] ->value;
 }
 
 void * nextMap(HashMap * map) {
