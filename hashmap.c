@@ -120,10 +120,8 @@ void * firstMap(HashMap * map) {
 
 
 void * nextMap(HashMap * map) {
+  map -> current++;
   long cap = map -> current;
-  cap++;
-  
-  
   return map -> buckets[cap] -> value;
 }
 
