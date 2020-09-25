@@ -124,7 +124,7 @@ void * nextMap(HashMap * map) {
   cap++;
   while(map -> buckets[cap] == NULL){
     if ( map -> buckets[cap] -> key == NULL){
-      break;
+      return NULL;
     }
     else cap++;
   }
