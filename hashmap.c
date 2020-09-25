@@ -90,7 +90,7 @@ void eraseMap(HashMap * map,  char * key) {//pair->key=NULL
     }
     if (is_equal(key,map -> buckets[cap] -> key)){
       map -> current = cap;
-      map -> buckets[cap] -> key = NULL;
+      map -> buckets[cap -1] -> key = NULL;
     }
   }
 }
