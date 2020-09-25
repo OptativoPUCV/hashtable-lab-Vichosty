@@ -123,7 +123,7 @@ void * nextMap(HashMap * map) {
   long cap = map -> current;
   cap++;
   while(map -> buckets[cap] == NULL){
-    if ( map -> buckets[cap] -> key == NULL){
+    if ( map -> buckets[cap] -> key != NULL){
       return NULL;
     }
     else cap++;
