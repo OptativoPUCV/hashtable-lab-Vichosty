@@ -95,7 +95,7 @@ void * searchMap(HashMap * map,  char * key) {
       break;
     }
     
-    if (cap == map -> capacity) return NULL;
+    if (cap == map -> capacity -1){return NULL;}
     cap++;
   }
   map -> current = cap;
