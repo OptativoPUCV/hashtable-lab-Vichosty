@@ -94,8 +94,9 @@ void * searchMap(HashMap * map,  char * key) {
     if (1 == is_equal(map -> buckets[cap] -> key, key)){
       map -> current = cap;
       return map-> buckets[cap] -> value;
-    }
+    }else{
     cap++;
+    }
   }
   return NULL;
   
