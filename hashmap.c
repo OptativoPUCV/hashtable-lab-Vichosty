@@ -122,6 +122,10 @@ void * firstMap(HashMap * map) {
 void * nextMap(HashMap * map) {
   map -> current++;
   long cap = map -> current;
+  while( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
+    cap++;
+  }
+  map -> current = cap;
   return map -> buckets[cap] -> value;
 }
 
