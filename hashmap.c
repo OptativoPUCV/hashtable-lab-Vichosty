@@ -91,7 +91,7 @@ void * searchMap(HashMap * map,  char * key) {
   long cap = hash(key, map -> capacity);
   while (cap < map->capacity){
     
-    if (is_equal(key, map -> buckets[cap] -> key)){
+    if (1 == is_equal(map -> buckets[cap] -> key, key)){
       map -> current = cap;
       return map-> buckets[cap] -> value;
     }
