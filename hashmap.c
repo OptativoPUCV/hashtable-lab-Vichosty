@@ -98,7 +98,7 @@ void * searchMap(HashMap * map,  char * key) {
   }
   map -> current = cap;
   
-  return map-> buckets[cap];
+  return map-> buckets[cap] -> value;
   
 }
 
