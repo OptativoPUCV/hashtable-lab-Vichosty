@@ -97,7 +97,11 @@ void * searchMap(HashMap * map,  char * key) {
     cap++;
   }
   map -> current = cap;
+  if (map -> buckets[cap] == NULL){
+    return NULL;
+  }else {
   return map-> buckets[cap] -> value;
+  }
 }
 
 void * firstMap(HashMap * map) {
