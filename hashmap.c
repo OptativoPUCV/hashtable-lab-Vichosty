@@ -82,7 +82,10 @@ HashMap * createMap(long capacity) {
 
 }
 
-void eraseMap(HashMap * map,  char * key) {    
+void eraseMap(HashMap * map,  char * key) {//pair->key=NULL
+  long cap = hash(key, map -> capacity);
+  map -> buckets[cap] -> key = NULL;
+
 
 
 }
