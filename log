@@ -478,3 +478,9 @@ Fri Sep 25 23:39:16 UTC 2020:
  tests:  13|2
 total_score: 50/70
 cac5382
+Fri Sep 25 23:41:20 UTC 2020: 
+ hashmap.c | 12 ++++++++----
+ 1 file changed, 8 insertions(+), 4 deletions(-)
+ tests:  13|2
+total_score: 50/70
+a782b08

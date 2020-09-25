@@ -110,7 +110,7 @@ void * searchMap(HashMap * map,  char * key) {
 }
 
 void * firstMap(HashMap * map) {
-  int cap = 0;
+  long cap = 0;
   while( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
     cap++;
   }
@@ -119,8 +119,12 @@ void * firstMap(HashMap * map) {
 }
 
 
-
 void * nextMap(HashMap * map) {
-
-    return NULL;
+  long cap = map -> current;
+  while( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
+    cap++;
+  }
+  map -> current = cap;
+  return map -> buckets[cap] -> value;
 }
+
