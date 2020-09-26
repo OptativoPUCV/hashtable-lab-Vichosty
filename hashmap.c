@@ -120,12 +120,15 @@ void * firstMap(HashMap * map) {
 
 
 void * nextMap(HashMap * map) {
-  map -> current++;
   long cap = map -> current;
-  while( (map -> buckets[cap] == NULL) || ( map -> buckets[cap] -> key == NULL)){
-    cap++;
+  for (; cap < map->capacity ;cap++){
+    if (map -> buckets[cap] != NULL){
+      map -> current = cap;
+      return map -> buckets[cap] -> value;
+    }
+
   }
-  map -> current = cap;
-  return map -> buckets[cap] -> value;
+  return NULL;
+  
 }
 
