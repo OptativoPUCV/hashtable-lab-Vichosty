@@ -121,6 +121,7 @@ void * firstMap(HashMap * map) {
 
 void * nextMap(HashMap * map) {
   long cap = map -> current;
+  cap++;
   for (; cap < map->capacity ;cap++){
     if (map -> buckets[cap] != NULL){
       map -> current = cap;
